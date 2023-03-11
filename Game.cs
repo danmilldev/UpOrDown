@@ -9,9 +9,14 @@ namespace UpOrDown
     public class Game
     {
         //Initializing Variables
-        int guesses = 10;
+        int guesses { get; set; }
         Random makeRandomNumber = new();
-        int numberToGuess = 0;
+        int numberToGuess { get; set; }
+
+        Game()
+        {
+            guesses = 10;
+        }
 
         public void Menu()
         {
@@ -26,7 +31,7 @@ namespace UpOrDown
             Console.WriteLine("Choosing:");
             int selection = Convert.ToInt32(Console.ReadLine());
 
-            numberToGuess = makeRandomNumber.Next(100);
+            numberToGuess = makeRandomNumber.Next(100 + 1);
 
             guesses = 10;
 
