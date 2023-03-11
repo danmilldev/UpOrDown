@@ -13,7 +13,7 @@ namespace UpOrDown
         Random makeRandomNumber = new();
         int numberToGuess { get; set; }
 
-        Game()
+        public Game()
         {
             guesses = 10;
         }
