@@ -13,11 +13,13 @@ namespace UpOrDown
         Random makeRandomNumber = new();
         int numberToGuess { get; set; }
 
+        //initiliazing guesses
         public Game()
         {
             guesses = 10;
         }
 
+        //the menu to choose between starting or exiting the game
         public void Menu()
         {
             Console.WriteLine("Menu");
@@ -26,6 +28,7 @@ namespace UpOrDown
             MenuSelection();
         }
 
+        //will execute what is selected in the menu
         void MenuSelection()
         {
             Console.WriteLine("Choosing:");
@@ -46,6 +49,7 @@ namespace UpOrDown
             }
         }
 
+        //initializing the GameLoop() until guesses reaches the number 0 and then goes back to the Menu()
         void StartGame()
         {
             Console.WriteLine("Guesses Left: " + guesses);
@@ -58,6 +62,7 @@ namespace UpOrDown
             Menu();
         }
 
+        //The GameLoop where it checks if it was the correct number or not and prints an result accordingly to it
         void GameLoop()
         {
             Console.WriteLine("Guess a number between 0 and 100");
@@ -77,7 +82,7 @@ namespace UpOrDown
             }
         }
 
-
+        //the main guessing point where it gives back hints according to the user input
         int Guessing()
         {
             int guess = 0;
